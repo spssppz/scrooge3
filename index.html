@@ -5,7 +5,7 @@
   <title>Scrooge Frog</title>
   <meta charset="UTF-8">
   <meta name="format-detection" content="telephone=no">
-  <link rel="stylesheet" href="css/style.min.css?_v=20230913141142">
+  <link rel="stylesheet" href="css/style.min.css?_v=20230913145220">
   <link rel="shortcut icon" href="img/favicon.png">
   <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,12 +15,12 @@
 
   <div class="wrapper">
     <header class="header" data-da=".page, 992, 0">
-      <div class="header__top top-header">
+      <div class="header__top top-header" data-lp>
         <div class="top-header__container">
           <a class="top-header__descr" href="#offer">USE YOUR AD BUDGET MORE WISELY</a>
         </div>
       </div>
-      <div class="header__bottom bottom-header">
+      <div class="header__bottom bottom-header" data-lp>
         <div class="bottom-header__container">
           <div class="bottom-header__wrapper" data-spollers>
             <a class="bottom-header__logo" href="">
@@ -64,7 +64,7 @@
                 <p class="slide-hero__text">
                   We’re not fake AI with manual algorithms inside, we create and train <span>our own models</span>
                 </p>
-                <a class="slide-hero__btn btn" href="">REQUEST TO DEMO</a>
+                <button class="slide-hero__btn btn" data-popup="#error">REQUEST TO DEMO</button>
               </div>
             </div>
             <div class="hero__slide swiper-slide slide-hero">
@@ -77,7 +77,7 @@
                   Based on data analysis from our Antifraud, you will be able to redistribute your budget and
                   <span>increase your ROI!</span>
                 </p>
-                <a class="slide-hero__btn btn" href="">REQUEST TO DEMO</a>
+                <a class="slide-hero__btn btn" href="#offer">REQUEST TO DEMO</a>
               </div>
             </div>
             <div class="hero__slide swiper-slide slide-hero">
@@ -89,7 +89,7 @@
                 <p class="slide-hero__text">
                   Only anonymized data in accordance with the <span>GDPR</span>
                 </p>
-                <a class="slide-hero__btn btn" href="">REQUEST TO DEMO</a>
+                <a class="slide-hero__btn btn" href="#offer">REQUEST TO DEMO</a>
               </div>
             </div>
           </div>
@@ -267,8 +267,12 @@
         <div class="models__container">
           <h2 class="models__title title">What ML models do we use?</h2>
           <div class="models__labels">
-            <div class="models__label">Long Short-Term Memory Network (LSTM)</div>
-            <div class="models__label">Random Forest Classifier</div>
+            <div class="models__label">
+              <span>Long Short-Term Memory Network (LSTM)</span>
+            </div>
+            <div class="models__label">
+              <span>Random Forest Classifier</span>
+            </div>
           </div>
           <div class="models__body">
             <picture>
@@ -645,7 +649,27 @@
       </div>
     </div>
   </div>
-  <script src="js/app.min.js?_v=20230913141142"></script>
+
+  <div class="popup" id="error" aria-hidden="true">
+    <div class="popup__wrapper">
+      <div class="popup__content popup__content_error">
+        <button class="popup__close popup__close_error" data-close type="button">Close popup</button>
+        <div class="popup__body">
+          <div class="popup__icon">
+            <picture>
+              <source srcset="img/popup-decor.webp" type="image/webp">
+              <img src="img/popup-decor.png" width="127" height="161" alt="">
+            </picture>
+          </div>
+          <div class="popup__right">
+            <p class="popup__text">Error</p>
+            <p class="popup__text">Try again!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/app.min.js?_v=20230913145220"></script>
 
 </body>
 
